@@ -11,7 +11,7 @@ void GameOverUIPanel::initialiseButtons() {
 GameOverUIPanel::GameOverUIPanel(Vector2i res) :
   UIPanel(res, res.x / 10 * 3, res.y / 2, res.x / 10 * 3, res.y / 6,
           50, 255, 255, 255){
-  m_ButtonWidth = res.x / 20;
+  m_ButtonWidth = res.x / 15;
   m_ButtonHeight = res.y / 20;
   m_ButtonPadding = res.x / 100;
 
