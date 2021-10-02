@@ -1,9 +1,9 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <map>
-#include "GameScreen.h"
+#include "../Screens/Game/GameScreen.h"
 #include "../Screens/ScreenManagerRemoteControl.h"
-#include "SelectScreen.h"
+#include "../Screens/Select/SelectScreen.h"
 //#include "LevelManager.h"
 #include "BitmapStore.h"
 #include <iostream>
@@ -24,7 +24,7 @@ public:
 
   ScreenManager(Vector2i res);
   void update(float fps);
-  void draw(RederWindow& window);
+  void draw(RenderWindow& window);
   void handleInput(RenderWindow& window);
 
   /****************************************************

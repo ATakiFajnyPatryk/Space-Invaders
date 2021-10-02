@@ -9,7 +9,7 @@ GameUIPanel::GameUIPanel(Vector2i res) :
   m_Font.loadFromFile("resources/fonts/Roboto-Bold.ttf");
   m_Text.setFont(m_Font);
   m_Text.setPosition(Vector2f(15,15));
-  m_Text.setCharacterSize(60);
+  m_Text.setCharacterSize(45);
 }
 
 void GameUIPanel::draw(RenderWindow &window) {
@@ -17,7 +17,7 @@ void GameUIPanel::draw(RenderWindow &window) {
   stringstream ss;
   ss << "Score: " << WorldState::SCORE
      << "  Lives: " << WorldState::LIVES
-     << "  WaveL " << WorldState::WAVE_NUMBER;
+     << "  Wave: " << WorldState::WAVE_NUMBER;
   m_Text.setString(ss.str());
   window.draw(m_Text);
 }

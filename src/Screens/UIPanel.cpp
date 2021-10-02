@@ -9,7 +9,7 @@ UIPanel::addButton(float x, float y, int width, int height, int red, int green,
 
 UIPanel::UIPanel(Vector2i res, int x, int y, float width, float height,
                  int alpha, int red, int green, int blue) {
-  m_UIPanel.setFillColor(Color(red, green, blue));
+  m_UIPanel.setFillColor(Color(red, green, blue, alpha));
   m_UIPanel.setSize(Vector2f(width, height));
   m_View.setSize(Vector2f(width, height));
   m_View.setCenter(width / 2, height / 2);

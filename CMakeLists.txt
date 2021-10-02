@@ -23,6 +23,7 @@ file(COPY resources DESTINATION ${CMAKE_BINARY_DIR})
 
 set(SOURCE_FILES
         src/Engine/SpaceInvaders++.cpp
+        src/Engine/WorldState.h
         src/DevelopState.h
         src/Engine/GameEngine.cpp
         src/Engine/GameEngine.h
@@ -42,7 +43,6 @@ set(SOURCE_FILES
         src/Screens/InputHandler.h
         src/Screens/Screen.cpp
         src/Screens/Screen.h
-        src/Engine/WorldState.h
         src/Screens/Select/SelectScreen.cpp
         src/Screens/Select/SelectScreen.h
         src/Screens/Select/SelectInputHandler.cpp

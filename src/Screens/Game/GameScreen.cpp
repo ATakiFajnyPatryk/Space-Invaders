@@ -3,6 +3,14 @@
 #include "GameOverUIPanel.h"
 #include "../../Engine/WorldState.h"
 
+int WorldState::WORLD_HEIGHT;
+int WorldState::NUM_INVADERS;
+int WorldState::NUM_INVADERS_AT_START;
+int WorldState::LIVES;
+int WorldState::SCORE;
+
+bool GameScreen::m_GameOver = false;
+
 GameScreen::GameScreen(ScreenManagerRemoteControl *smrc, Vector2i res) {
   m_GIH = make_shared<GameInputHandler>();
   auto guip = make_unique<GameUIPanel>(res);

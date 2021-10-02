@@ -3,7 +3,7 @@
 #include "../../Engine/WorldState.h"
 #include <iostream>
 
-void GameOverInputHandler::handleKeyPressed(Event &event, RenderWindow window) {
+void GameOverInputHandler::handleKeyPressed(Event& event, RenderWindow& window) {
   if (event.key.code == Keyboard::Escape) {
     SoundEngine::playClick();
     getPointerToScreenManagerRemoteControl()->SwitchScreens("Select");

@@ -3,6 +3,8 @@
 #include "../../Engine/WorldState.h"
 #include <iostream>
 
+int WorldState::WAVE_NUMBER;
+
 void SelectInputHandler::handleKeyPressed(Event &event, RenderWindow &window) {
   if (Keyboard::isKeyPressed(Keyboard::Escape))
     window.close();

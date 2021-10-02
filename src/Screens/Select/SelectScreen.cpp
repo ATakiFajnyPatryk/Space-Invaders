@@ -1,6 +1,6 @@
 #include "SelectScreen.h"
-#include "SelectUIPanel"
-#include "SelectInputHandler"
+#include "SelectUIPanel.h"
+#include "SelectInputHandler.h"
 
 SelectScreen::SelectScreen(ScreenManagerRemoteControl *smrc, Vector2i res) {
   auto suip = make_unique<SelectUIPanel>(res);

@@ -3,6 +3,8 @@
 
 using namespace std;
 
+SoundEngine* SoundEngine::m_s_Instance = nullptr;
+
 SoundEngine::SoundEngine() {
   assert(m_s_Instance == nullptr);
   m_s_Instance = this;
