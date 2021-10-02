@@ -33,22 +33,22 @@ public:
   *****************************************************
   ****************************************************/
 
-  void ScreenManagerRemoteControl::SwitchScreens(string screenToSwitchTo) {
+  void SwitchScreens(string screenToSwitchTo) override {
     m_CurrentScreen = "" + screenToSwitchTo;
     m_Screens[m_CurrentScreen]->initialise();
   }
 
-  void ScreenManagerRemoteControl::loadLevelInPlayMode(string screenToLoad) {
+  void loadLevelInPlayMode(string screenToLoad) override {
     //m_LevelManager.getGameObjects.clear();
     //m_LevelManager.loadGameObjectsForPlayMode(screenToLoad);
     SwitchScreens("Game");
   }
 
-  //vector<GameObject> & ScreenManagerRemoteControl::getGameObjects() {
+  //vector<GameObject> & getGameObjects() override {
     //return m_LevelManager.getGameObjects()'
   //}
 
-  //GameObjectsSharer& shareGameObjectSharer() {
+  //GameObjectsSharer& shareGameObjectSharer() override {
     //return LevelManager;
   //}
 };

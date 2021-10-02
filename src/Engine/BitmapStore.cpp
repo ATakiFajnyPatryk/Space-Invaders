@@ -1,7 +1,8 @@
 #include "BitmapStore.h"
-#include <assert.h>
+#include <cassert>
 
 BitmapStore* BitmapStore::m_s_Instance = nullptr;
+
 BitmapStore::BitmapStore() {
   assert(m_s_Instance == nullptr);
   m_s_Instance = this;

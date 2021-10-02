@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10.2)
 project(Space-Invaders)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static-libstdc++ -static-libgcc")
 
 set(SFML_INCLUDE_DIR "/home/Libraries/SFML-2.5.1-Compiled/include")
@@ -23,7 +23,40 @@ file(COPY resources DESTINATION ${CMAKE_BINARY_DIR})
 
 set(SOURCE_FILES
         src/Engine/SpaceInvaders++.cpp
-        src/DevelopState.h src/Engine/GameEngine.cpp src/Engine/GameEngine.h src/Engine/SoundEngine.cpp src/Engine/SoundEngine.h src/Engine/ScreenManager.cpp src/Engine/ScreenManager.h src/Engine/BitmapStore.cpp src/Engine/BitmapStore.h src/Screens/ScreenManagerRemoteControl.cpp src/Screens/ScreenManagerRemoteControl.h)
+        src/DevelopState.h
+        src/Engine/GameEngine.cpp
+        src/Engine/GameEngine.h
+        src/Engine/SoundEngine.cpp
+        src/Engine/SoundEngine.h
+        src/Engine/ScreenManager.cpp
+        src/Engine/ScreenManager.h
+        src/Engine/BitmapStore.cpp
+        src/Engine/BitmapStore.h
+        src/Screens/ScreenManagerRemoteControl.cpp
+        src/Screens/ScreenManagerRemoteControl.h
+        src/Screens/Button.cpp
+        src/Screens/Button.h
+        src/Screens/UIPanel.cpp
+        src/Screens/UIPanel.h
+        src/Screens/InputHandler.cpp
+        src/Screens/InputHandler.h
+        src/Screens/Screen.cpp
+        src/Screens/Screen.h
+        src/Engine/WorldState.h
+        src/Screens/Select/SelectScreen.cpp
+        src/Screens/Select/SelectScreen.h
+        src/Screens/Select/SelectInputHandler.cpp
+        src/Screens/Select/SelectInputHandler.h
+        src/Screens/Select/SelectUIPanel.cpp
+        src/Screens/Select/SelectUIPanel.h
+        src/Screens/Game/GameScreen.cpp
+        src/Screens/Game/GameScreen.h
+        src/Screens/Game/GameInputHandler.cpp
+        src/Screens/Game/GameInputHandler.h
+        src/Screens/Game/GameUIPanel.cpp
+        src/Screens/Game/GameUIPanel.h
+        src/Screens/Game/GameOverInputHandler.cpp
+        src/Screens/Game/GameOverInputHandler.h src/Screens/Game/GameOverUIPanel.cpp src/Screens/Game/GameOverUIPanel.h)
 
 add_executable(Space-Invaders ${SOURCE_FILES})
 target_link_libraries(Space-Invaders sfml-graphics sfml-window sfml-system sfml-audio)
