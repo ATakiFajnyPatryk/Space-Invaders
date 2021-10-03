@@ -56,7 +56,31 @@ set(SOURCE_FILES
         src/Screens/Game/GameUIPanel.cpp
         src/Screens/Game/GameUIPanel.h
         src/Screens/Game/GameOverInputHandler.cpp
-        src/Screens/Game/GameOverInputHandler.h src/Screens/Game/GameOverUIPanel.cpp src/Screens/Game/GameOverUIPanel.h)
+        src/Screens/Game/GameOverInputHandler.h
+        src/Screens/Game/GameOverUIPanel.cpp
+        src/Screens/Game/GameOverUIPanel.h
+        src/GameObjects/Component.cpp
+        src/GameObjects/Component.h
+        src/GameObjects/ColliderComponent.cpp
+        src/GameObjects/ColliderComponent.h
+        src/GameObjects/RectColliderComponent.cpp
+        src/GameObjects/RectColliderComponent.h
+        src/GameObjects/GraphicsComponent.cpp
+        src/GameObjects/GraphicsComponent.h
+        src/GameObjects/StandardGraphicsComponent.cpp
+        src/GameObjects/StandardGraphicsComponent.h
+        src/GameObjects/TransformComponent.cpp
+        src/GameObjects/TransformComponent.h
+        src/GameObjects/UpdateComponent.cpp
+        src/GameObjects/UpdateComponent.h
+        src/GameObjects/BulletUpdateComponent.cpp
+        src/GameObjects/BulletUpdateComponent.h
+        src/GameObjects/InvaderUpdateComponent.cpp
+        src/GameObjects/InvaderUpdateComponent.h
+        src/GameObjects/PlayerUpdateComponent.cpp
+        src/GameObjects/PlayerUpdateComponent.h
+        src/GameObjects/GameObject.cpp
+        src/GameObjects/GameObject.h)
 
 add_executable(Space-Invaders ${SOURCE_FILES})
 target_link_libraries(Space-Invaders sfml-graphics sfml-window sfml-system sfml-audio)

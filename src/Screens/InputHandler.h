@@ -10,6 +10,7 @@ using namespace sf;
 using namespace std;
 
 class Screen;
+
 class InputHandler {
 private:
   Screen* m_ParentScreen;

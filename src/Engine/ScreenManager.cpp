@@ -1,8 +1,10 @@
 #include "ScreenManager.h"
 
+#include <memory>
+
 ScreenManager::ScreenManager(Vector2i res) {
-  m_Screens["Game"] = unique_ptr<GameScreen>(new GameScreen(this, res));
-  m_Screens["Select"] = unique_ptr<SelectScreen>(new SelectScreen(this, res));
+  m_Screens["Game"] = std::make_unique<GameScreen>(this, res);
+  m_Screens["Select"] = std::make_unique<SelectScreen>(this, res);
 }
 
 void ScreenManager::update(float fps) {

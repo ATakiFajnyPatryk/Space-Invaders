@@ -50,7 +50,7 @@ View *InputHandler::getPointerToUIView() {
 }
 
 ScreenManagerRemoteControl *
-InputHandler::getPointerToScreenManagerRemoteControl() {
+  InputHandler::getPointerToScreenManagerRemoteControl() {
   return m_ScreenManagerRemoteControl;
 }
 

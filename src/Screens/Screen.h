@@ -7,6 +7,7 @@
 #include "ScreenManagerRemoteControl.h"
 
 class InputHandler;
+
 class Screen {
 private:
   vector<shared_ptr<InputHandler>> m_InputHandlers;
