@@ -80,7 +80,19 @@ set(SOURCE_FILES
         src/GameObjects/PlayerUpdateComponent.cpp
         src/GameObjects/PlayerUpdateComponent.h
         src/GameObjects/GameObject.cpp
-        src/GameObjects/GameObject.h)
+        src/GameObjects/GameObject.h
+        src/FileIO/GameObjectBlueprint.cpp
+        src/FileIO/GameObjectBlueprint.h
+        src/FileIO/ObjectTags.cpp
+        src/FileIO/ObjectTags.h
+        src/FileIO/BlueprintObjectParser.cpp
+        src/FileIO/BlueprintObjectParser.h
+        src/FileIO/PlayModeObjectLoader.cpp
+        src/FileIO/PlayModeObjectLoader.h
+        src/FileIO/GameObjectFactoryPlayMode.cpp
+        src/FileIO/GameObjectFactoryPlayMode.h
+        src/FileIO/GameObjectSharer.cpp
+        src/FileIO/GameObjectSharer.h)
 
 add_executable(Space-Invaders ${SOURCE_FILES})
 target_link_libraries(Space-Invaders sfml-graphics sfml-window sfml-system sfml-audio)
