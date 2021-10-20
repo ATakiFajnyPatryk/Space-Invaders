@@ -92,7 +92,13 @@ set(SOURCE_FILES
         src/FileIO/GameObjectFactoryPlayMode.cpp
         src/FileIO/GameObjectFactoryPlayMode.h
         src/FileIO/GameObjectSharer.cpp
-        src/FileIO/GameObjectSharer.h)
+        src/FileIO/GameObjectSharer.h
+        src/Engine/LevelManager.cpp
+        src/Engine/LevelManager.h
+        src/GameObjects/BulletSpawner.cpp
+        src/GameObjects/BulletSpawner.h
+        src/Engine/PhysicsEnginePlayMode.cpp
+        src/Engine/PhysicsEnginePlayMode.h)
 
 add_executable(Space-Invaders ${SOURCE_FILES})
 target_link_libraries(Space-Invaders sfml-graphics sfml-window sfml-system sfml-audio)

@@ -4,7 +4,7 @@
 #include <fstream>
 
 void PlayModeObjectLoader::loadGameObjectsForPlayMode(
-        string pathToFile, vector<GameObject> &mGameObjects) {
+        const string& pathToFile, vector<GameObject> &mGameObjects) {
   ifstream reader(pathToFile);
   string lineFromFile;
   float x = 0, y = 0, width = 0, height = 0;

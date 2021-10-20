@@ -4,7 +4,7 @@
 #include "../Screens/Game/GameScreen.h"
 #include "../Screens/ScreenManagerRemoteControl.h"
 #include "../Screens/Select/SelectScreen.h"
-//#include "LevelManager.h"
+#include "LevelManager.h"
 #include "BitmapStore.h"
 #include <iostream>
 
@@ -14,7 +14,7 @@ using namespace std;
 class ScreenManager : public ScreenManagerRemoteControl {
 private:
   map<string, unique_ptr<Screen>> m_Screens;
-  //LevelManager m_LevelManager;
+  LevelManager m_LevelManager;
 
 protected:
   string m_CurrentScreen = "Select";
@@ -27,29 +27,12 @@ public:
   void draw(RenderWindow& window);
   void handleInput(RenderWindow& window);
 
-  /****************************************************
-  *****************************************************
-  From ScreenManagerRemoteControl interface
-  *****************************************************
-  ****************************************************/
+  void SwitchScreens(string screenToSwitchTo) override;
 
-  void SwitchScreens(string screenToSwitchTo) override {
-    m_CurrentScreen = "" + screenToSwitchTo;
-    m_Screens[m_CurrentScreen]->initialise();
-  }
+  void loadLevelInPlayMode(string screenToLoad) override;
 
-  void loadLevelInPlayMode(string screenToLoad) override {
-    //m_LevelManager.getGameObjects.clear();
-    //m_LevelManager.loadGameObjectsForPlayMode(screenToLoad);
-    SwitchScreens("Game");
-  }
+  vector<GameObject>& getGameObjects() override;
 
-  //vector<GameObject> & getGameObjects() override {
-    //return m_LevelManager.getGameObjects()'
-  //}
-
-  //GameObjectsSharer& shareGameObjectSharer() override {
-    //return LevelManager;
-  //}
+  GameObjectSharer& shareGameObjectSharer() override;
 };
 

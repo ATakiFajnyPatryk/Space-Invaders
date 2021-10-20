@@ -5,7 +5,7 @@
 #include <memory>
 #include "Component.h"
 #include "GraphicsComponent.h"
-#include "GameObjectSharer.h"
+#include "../FileIO//GameObjectSharer.h"
 #include "UpdateComponent.h"
 
 class GameObject {

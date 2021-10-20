@@ -13,6 +13,6 @@ private:
   GameObjectFactoryPlayMode m_GameObjectFactoryPlayMode;
 
 public:
-  void loadGameObjectsForPlayMode(string pathToFile,
+  void loadGameObjectsForPlayMode(const string& pathToFile,
                                   vector<GameObject>& mGameObjects);
 };
